@@ -4,6 +4,7 @@ import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 import createEmotionCache from '../utils/createEmotionCache';
 import darkThemeOptions from '../styles/themes/darkThemeOptions';
+import { Layout } from '../components/layout';
 import '../styles/globals.css';
 
 interface ExtendedProps extends AppProps {
@@ -22,7 +23,9 @@ const App: React.FunctionComponent<ExtendedProps> = ({
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </CacheProvider>
   );
