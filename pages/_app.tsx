@@ -4,7 +4,7 @@ import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 import createEmotionCache from '../utils/createEmotionCache';
 import darkThemeOptions from '../styles/themes/darkThemeOptions';
-import { Layout } from '../components/layout';
+import { Layout } from '../components/Layout';
 import '../styles/globals.css';
 
 interface ExtendedProps extends AppProps {
