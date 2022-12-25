@@ -1,5 +1,7 @@
-import { Navbar } from './navbar/Navbar';
 import { ReactNode } from 'react';
+import Box from '@mui/material/Box';
+
+import { Navbar } from './navbar/Navbar';
 
 interface LayoutProps {
   children?: ReactNode;
@@ -7,9 +9,11 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <>
+    <Box sx={{ display: 'flex' }}>
       <Navbar />
-      <main>{children}</main>
-    </>
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {children}
+      </Box>
+    </Box>
   );
 }
