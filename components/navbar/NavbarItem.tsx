@@ -1,20 +1,19 @@
+import { ReactNode } from 'react';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 
 interface NavbarItemProps {
   text: string;
+  icon: ReactNode;
 }
 
-export function NavbarItem({ text }: NavbarItemProps) {
+export function NavbarItem({ text, icon }: NavbarItemProps) {
   return (
     <ListItem>
       <ListItemButton>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
+        <ListItemIcon>{icon}</ListItemIcon>
         <ListItemText primary={text} />
       </ListItemButton>
     </ListItem>
