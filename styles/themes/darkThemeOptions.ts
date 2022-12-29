@@ -1,8 +1,8 @@
-import { ThemeOptions } from "@mui/material/styles";
+import { ThemeOptions } from '@mui/material/styles';
 
 const darkThemeOptions: ThemeOptions = {
   palette: {
-    mode: "dark",
+    mode: 'dark',
   },
 };
 
